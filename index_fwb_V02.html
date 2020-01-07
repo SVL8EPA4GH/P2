@@ -18,6 +18,7 @@ var svg = d3.select("svg"),
 
 var x0 = d3.scaleBand()
     .rangeRound([0, width])
+    .paddingOuter(0.5) //SVL add room for axis on left and right
     .paddingInner(0.1);
 
 var x1 = d3.scaleBand()
