@@ -110,7 +110,20 @@ d3.csv("FWB_Region_Division.csv", function(error, data) {
       .attr("font-weight", "bold")
       .attr("text-anchor", "start")
       .style("font", "18px sans-serif")
-      .text("Relative Score");
+      .text("Score");
+
+  g.append("g")
+      .attr("class", "axis")
+      .call(d3.axisRight(y).ticks(null, "s"))
+    .append("text")
+      .attr("x", 2)
+      .attr("y", y(y.ticks().pop()) -1)
+      .attr("dy", "0.48em")
+      .attr("fill", "#000")
+      .attr("font-weight", "bold")
+      .attr("text-anchor", "end")
+      .style("font", "18px sans-serif")
+      .text("FWB question");
 /*
   var legend = g.append("g")
       .attr("font-family", "sans-serif")
