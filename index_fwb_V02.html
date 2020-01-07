@@ -103,11 +103,12 @@ d3.csv("FWB_Region_Division.csv", function(error, data) {
       .call(d3.axisLeft(y).ticks(null, "s"))
     .append("text")
       .attr("x", 2)
-      .attr("y", y(y.ticks().pop()) + 2.5)
+      .attr("y", y(y.ticks().pop()) + 0)
       .attr("dy", "0.48em")
       .attr("fill", "#000")
       .attr("font-weight", "bold")
       .attr("text-anchor", "start")
+      .style("font", "14px sans-serif")
       .text("Relative Score");
 /*
   var legend = g.append("g")
