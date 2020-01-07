@@ -112,23 +112,13 @@ d3.csv("FWB_Region_Division.csv", function(error, data) {
       .style("font", "18px sans-serif")
       .text("Score");
 
-  g.append("g")
-      .attr("class", "axis")
-      .call(d3.axisRight(y).ticks(null, "s"))
-    .append("text")
-      .attr("x", width - (width -10)) //SVL locate text at right side
-      .attr("y", 0 - (margin.top / 2)) //SVL change to "0 - (margin.top / 2)"
-      .attr("dy", "0.48em")
-      .attr("fill", "#000")
-      .attr("font-weight", "bold")
-      .attr("text-anchor", "end")
-      .style("font", "18px sans-serif")
-      .text("FWB question"); // SVL added this section
+
 /*
   var legend = g.append("g")
       .attr("font-family", "sans-serif")
       .attr("font-size", 18)
       .attr("text-anchor", "end")
+      .text("FWB question"); // SVL added this section
     .selectAll("g")
     .data(keys.slice().reverse())
     .enter().append("g")
@@ -161,7 +151,7 @@ d3.csv("FWB_Region_Division.csv", function(error, data) {
       .attr("x", 9)
       .attr("dy", "0.35em")
       .attr("fill", "#000")
-      .style("font", "14px sans-serif")
+      .style("font", "20px sans-serif")
       .text(function(d) { return d.key; });
 
 svg.append("text")
