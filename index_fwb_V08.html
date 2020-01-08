@@ -119,7 +119,11 @@ d3.csv("FWB_Region_Division.csv", function(error, data) {
       .style("font", "20px sans-serif")
       .call(d3.axisBottom(x0)); //x0 refers to Region
 
-
+  figureTopAxis = g.append("g")
+      .attr("class", "axis")
+      .attr("transform", "translate(0," + 1 + ")")
+      .style("font", "20px sans-serif")
+      .call(d3.axisTop(x1)); //x1 refers to Division
 
   figureLeftAxis = g.append("g")
       .attr("class", "axis")
